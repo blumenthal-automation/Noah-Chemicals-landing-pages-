@@ -1,0 +1,118 @@
+<style>
+    /* PREMIUM NOAH CHEMICALS AESTHETIC FRAMEWORK v2 */
+    .nc-wrapper { font-family: var(--e-global-typography-primary-font-family, 'Montserrat'), 'Open Sans', sans-serif; max-width: 1280px; margin: 0 auto; color: var(--e-global-color-text, #2A3135); line-height: 1.7; background-color: #FAFCFD; -webkit-font-smoothing: antialiased; }
+    .nc-header { font-size: clamp(34px, 4vw, 50px); font-weight: 300; line-height: 1.2; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    .nc-h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 400; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    
+    .nc-aeo-block { position: relative; padding: 2.5rem 3.5rem; background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%); border-radius: 12px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04); border: 1px solid rgba(226, 232, 240, 0.8); overflow: hidden; margin-bottom: 3rem; }
+    .nc-aeo-block::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: linear-gradient(to bottom, var(--e-global-color-8e0ff1d, #CD140C), #E83A32); }
+    .nc-aeo-title { font-weight: 600; font-size: 1.25rem; color: var(--e-global-color-756035a, #0F172A); letter-spacing: -0.3px; margin-bottom: 1rem; text-transform: uppercase; }
+
+    .nc-trust-ribbon { display: flex; flex-wrap: wrap; gap: 2rem; padding: 1.5rem 2rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-bottom: 3px solid var(--e-global-color-8e0ff1d, #CD140C); color: #F8FAFC; }
+    .nc-trust-item { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 400; font-size: 1.05rem; letter-spacing: 0.5px; }
+    .nc-trust-icon { color: var(--e-global-color-8e0ff1d, #FF3D35); opacity: 0.9; }
+
+    .nc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: stretch; }
+    .nc-card { background: #FFFFFF; padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(226, 232, 240, 0.8); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease; position: relative; display: flex; flex-direction: column; height: 100%; }
+    .nc-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border-color: rgba(205, 20, 12, 0.2); }
+    .nc-card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--e-global-color-756035a, #0F172A); border-bottom: 1px solid #F1F5F9; padding-bottom: 15px; }
+    .nc-card ul { list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1; }
+    .nc-card li { margin-bottom: 15px; font-weight: 400; line-height: 1.6; color: #334155; position: relative; padding-left: 24px; }
+    .nc-card li::before { content: "\2022"; color: var(--e-global-color-8e0ff1d, #CD140C); font-size: 1.5rem; position: absolute; left: 0; top: -4px; }
+    
+    .nc-btn-wrap { margin-top: auto; }
+    .nc-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 4px 10px rgba(205, 12, 12, 0.15); align-self: flex-start; }
+    .nc-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(205, 12, 12, 0.25); background: #E83A32; }
+    .nc-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--e-global-color-756035a, #1E293B) !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid var(--e-global-color-756035a, #1E293B); align-self: flex-start; }
+    .nc-btn-outline:hover { background: #F8FAFC; transform: translateY(-2px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+
+    .nc-insight-banner { display: flex; align-items: center; gap: 3rem; background: #FFFFFF; padding: 3rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; flex-wrap: wrap; margin-bottom: 4rem; }
+    .nc-insight-content { flex: 2; min-width: 300px; }
+    .nc-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.5rem 0; }
+    .nc-faq-item strong { font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); }
+    .nc-faq-item p { margin-top: 1rem; color: #475569; font-weight: 400; font-size: 1.05rem; line-height: 1.7; }
+    .nc-section { margin-top: 4rem; margin-bottom: 4rem; }
+</style>
+
+<div class="nc-wrapper">
+    <div style="font-size: 0.85rem; margin-bottom: 1rem; margin-top: 2rem; color: #64748B; letter-spacing: 0.5px;">
+        NOH &rarr; MARKETS &rarr; ENERGY SECTOR &rarr; <span style="font-weight: 500; color: #0F172A;">OIL & GAS CHEMICALS</span>
+    </div>
+
+    <header class="nc-section" style="margin-top: 2rem;">
+        <h1 class="nc-header">High-Purity Chemicals for<br>Oil & Gas Extraction & Refining</h1>
+        <div class="nc-aeo-block">
+            <div class="nc-aeo-title">Optimizing Infrastructure with Custom Chemistry</div>
+            <p style="font-size: 1.15rem; color: #475569; margin: 0; line-height: 1.8;">
+                Noah Chemicals provides critical upstream and downstream inorganic compounds, including highly dense clear brine fluids, advanced hydrodesulfurization catalysts, and specialized cross-linkers designed to optimize extraction yields and ensure refinery continuous-operation reliability.
+            </p>
+        </div>
+    </header>
+
+    <div class="nc-trust-ribbon nc-section">
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> ISO 9001:2015 Manufacturer</div>
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> API Compliance Tolerances</div>
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg> Scale Customization</div>
+    </div>
+
+    <section class="nc-section">
+        <h2 class="nc-h2">Priority Extraction & Refining Materials</h2>
+        <div class="nc-grid">
+            <div class="nc-card">
+                <h3>Clear Brines & Drilling Fluids</h3>
+                <ul>
+                    <li><strong>Calcium Bromide & Sodium Bromide</strong> - Ultra-dense halide salts used to manage extreme pressure in HPHT deepwater wells.</li>
+                    <li><strong>Potassium Chloride (KCl)</strong> - Critical clay-inhibition stabilizer preventing wellbore collapse.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Halide Fluids</a></div>
+            </div>
+            <div class="nc-card">
+                <h3>Hydraulic Fracturing & Stimulation</h3>
+                <ul>
+                    <li><strong>Zirconium Oxides & Silicates</strong> - High-performance crosslinkers increasing the structural integrity of hydraulic fracturing fluids.</li>
+                    <li><strong>Barium Sulfate (BaSO4)</strong> - Primary weighting agent utilized in heavy drilling muds to maintain hydrostatic pressure.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Stimulation Chem</a></div>
+            </div>
+            <div class="nc-card">
+                <h3>Catalysts & Scavengers</h3>
+                <ul>
+                    <li><strong>Zinc Oxides (ZnO) & Acetates</strong> - Primary components for high-capacity H2S scavenging in sour gas streams.</li>
+                    <li><strong>Sodium Dichromate & Phosphates</strong> - Advanced inorganic corrosion inhibitors protecting transport pipeline infrastructure.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Refining Chemistry</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nc-insight-banner nc-section">
+        <img src="./assets/petrochemical_refinery_premium_1776910342648.png" style="flex: 1; min-width: 300px; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" alt="Advanced Petrochemical Extraction Refinery">
+        <div class="nc-insight-content">
+            <span style="display: block; color: var(--e-global-color-8e0ff1d, #CD140C); font-weight: 500; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Cross-Link Service</span>
+            <h3 style="font-size: 2.2rem; font-weight: 300; color: #0F172A; margin: 0 0 2rem 0; line-height: 1.2;">Beyond the Catalog: Petrochemical Precursors</h3>
+            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2.5rem; line-height: 1.8;">When standard drilling additives fail HPHT stress limits, offshore rigs need tailored solutions. We provide Custom Synthesis to adjust brine densities precisely, and Toll Blending services for proprietary Catalyst mixtures.</p>
+            <a href="/custom-synthesis/" class="nc-btn-primary">Explore Toll Blending</a>
+        </div>
+    </section>
+
+    <section class="nc-section" style="max-width: 900px; margin: 0 auto 8rem auto;">
+        <h2 class="nc-h2">Oil & Gas Supply Considerations</h2>
+        <div class="nc-faq-item">
+            <strong>Can Noah supply extreme-density Halide Brines rapidly for emergent well control issues?</strong>
+            <p>Yes. Our domestic synthesis agility allows us to formulate and rapidly dispatch Calcium and Sodium Bromides to prevent catastrophic pressure differentials in active drilling operations without waiting on offshore freight.</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>Are your catalytic precursors guaranteed against specific catalyst poisons?</strong>
+            <p>Absolutely. Using our in-house ICP-OES validation, we verify that Molybdenum and Tungsten precursors are definitively clear of specific antagonistic trace elements prior to shipment.</p>
+        </div>
+    </section>
+
+    <section class="nc-section" style="text-align: center; padding: 5rem 2rem; background: linear-gradient(to bottom, #FFFFFF, #F8FAFC); border: 1px solid #F1F5F9; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.02);">
+        <h2 class="nc-h2" style="margin-bottom: 1.5rem;">Secure your Oil & Gas Extraction Supply</h2>
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Don't outsource your critical pressure-control mechanics to a generic supplier. Speak directly with a Quality Assurance engineer who understands HPHT limits and catalyst purity documentation.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/contact/" class="nc-btn-primary">Schedule a Scale-up Consultation</a>
+            <a href="/noah-chemical-services/" class="nc-btn-outline">Speak With a Quality Engineer</a>
+        </div>
+    </section>
+</div>

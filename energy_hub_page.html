@@ -1,0 +1,264 @@
+<style>
+    /* PREMIUM NOAH CHEMICALS AESTHETIC FRAMEWORK v2 */
+    .nc-wrapper { font-family: var(--e-global-typography-primary-font-family, 'Montserrat'), 'Open Sans', sans-serif; max-width: 1280px; margin: 0 auto; color: var(--e-global-color-text, #2A3135); line-height: 1.7; background-color: #FFFFFF; -webkit-font-smoothing: antialiased; }
+    .nc-header { font-size: clamp(34px, 4vw, 50px); font-weight: 300; line-height: 1.2; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    .nc-h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 400; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    
+    .nc-aeo-block { position: relative; padding: 3rem 4rem; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.08); border: none; overflow: hidden; margin-bottom: 4rem; }
+    .nc-aeo-block::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(to bottom, var(--e-global-color-8e0ff1d, #CD140C), #E83A32); }
+    .nc-aeo-title { font-weight: 600; font-size: 1.25rem; color: var(--e-global-color-756035a, #0F172A); letter-spacing: -0.3px; margin-bottom: 1rem; text-transform: uppercase; }
+
+    .nc-trust-ribbon { display: flex; flex-wrap: wrap; gap: 2rem; padding: 1.5rem 2rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-bottom: 3px solid var(--e-global-color-8e0ff1d, #CD140C); color: #F8FAFC; }
+    .nc-trust-item { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 400; font-size: 1.05rem; letter-spacing: 0.5px; }
+    .nc-trust-icon { color: var(--e-global-color-8e0ff1d, #FF3D35); opacity: 0.9; }
+
+    .nc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch; margin-top: 2rem;}
+    .nc-card { background: #FFFFFF; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(226, 232, 240, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; display: flex; flex-direction: column; min-height: 100%; box-sizing: border-box; }
+    .nc-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); border-color: transparent; }
+    .nc-card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--e-global-color-756035a, #0F172A); border-bottom: 1px solid #F1F5F9; padding-bottom: 15px; }
+    .nc-card p { flex-grow: 1; color: #475569; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 400; }
+    
+    .nc-card-img-wrap { width: 100%; height: 200px; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; flex-shrink: 0; }
+    .nc-card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: block; }
+    .nc-card:hover .nc-card-img { transform: scale(1.05); }
+
+    .nc-btn-wrap { margin-top: auto; padding-top: 1.5rem; }
+
+    .nc-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 8px 15px rgba(205, 12, 12, 0.15); align-self: flex-start; }
+    .nc-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(205, 12, 12, 0.3); background: #E83A32; }
+    .nc-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--e-global-color-756035a, #1E293B) !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 2px solid var(--e-global-color-756035a, #1E293B); align-self: flex-start; }
+    .nc-btn-outline:hover { background: #F8FAFC; transform: translateY(-3px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); }
+
+    /* Feature List Styling */
+    .nc-feature-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+    .nc-feature-item { background: #FFFFFF; padding: 2.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.3s ease; border: 1px solid rgba(226, 232, 240, 0.5); }
+    .nc-feature-item:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: transparent; }
+    .nc-feature-icon-wrapper { min-width: 56px; height: 56px; background: rgba(205, 20, 12, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--e-global-color-8e0ff1d, #CD140C); }
+    .nc-feature-text strong { display: block; font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); margin-bottom: 0.5rem; }
+    .nc-feature-text span { font-weight: 400; font-size: 1.05rem; }
+
+    .nc-insight-banner { display: flex; align-items: center; gap: 4rem; background: #FFFFFF; padding: 4rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: none; flex-wrap: wrap; margin-bottom: 5rem; }
+    .nc-insight-image-container { flex: 1; min-width: 300px; height: 350px; background: #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+    .nc-insight-content { flex: 2; min-width: 300px; }
+    .nc-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.5rem 0; }
+    .nc-faq-item strong { font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); }
+    .nc-faq-item p { margin-top: 1rem; color: #475569; font-weight: 400; font-size: 1.05rem; line-height: 1.7; }
+    .nc-section { margin-top: 4rem; margin-bottom: 4rem; }
+</style>
+
+<div class="nc-wrapper">
+    <div style="font-size: 0.85rem; margin-bottom: 1rem; margin-top: 2rem; color: #64748B; letter-spacing: 0.5px;">
+        NOH &rarr; MARKETS &rarr; <span style="font-weight: 500; color: #0F172A;">ENERGY SECTOR</span>
+    </div>
+
+    <header class="nc-section" style="margin-top: 2rem;">
+        <h1 class="nc-header">Advanced Chemical Manufacturing<br>for the Energy Sector</h1>
+        
+        <div class="nc-aeo-block">
+            <div class="nc-aeo-title">Empowering the Grid with High-Purity Inorganic Chemistry</div>
+            <p style="font-size: 1.15rem; color: #475569; margin: 0; line-height: 1.8;">
+                Noah Chemicals is a premier domestic partner for the global energy sector, synthesizing certified, high-purity inorganic chemistries critical to thermodynamic scaling. Our analytical capabilities span from supplying high-purity Vanadium Pentoxide for massive VRFB liquid electrolytes (preventing cross-contamination via versatile oxidation states), to manufacturing perfectly uniform Boric Acid chemical shims supporting Advanced Reactor safety. Our San Antonio synthesis facility guarantees verifiable, on-shore supply chain resilience and strict ICP-OES validation for mission-critical energy infrastructure.
+            </p>
+        </div>
+    </header>
+
+    <div class="nc-trust-ribbon nc-section">
+        <div class="nc-trust-item">
+            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            ISO 9001:2015 Manufacturer
+        </div>
+        <div class="nc-trust-item">
+            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            ITAR Registered Security
+        </div>
+        <div class="nc-trust-item">
+            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            100% On-Shore Supply Chain
+        </div>
+    </div>
+
+    <section class="nc-section">
+        <h2 class="nc-h2">Select Your specific application parameter.</h2>
+        
+        <div class="nc-grid">
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/batteries.jpg" alt="Batteries & Energy Storage Facility" class="nc-card-img"></div>
+                <h3>Batteries & Energy Storage</h3>
+                <p>High-purity Vanadium Pentoxide (V2O5) precursors for VRFB liquid electrolytes. Extracting 4 distinct oxidation states to eliminate cross-contamination capacity loss, alongside lithium titanate active materials.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/batteries/" class="nc-btn-primary">Explore Battery Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/nuclear.jpg" alt="Nuclear Reactor Facility" class="nc-card-img"></div>
+                <h3>Nuclear Energy</h3>
+                <p>High-purity Boric Acid (H3BO3) chemical shims adjusting thermal neutron cross-sections. Resolving reactivity hot spots via uniform coolant dissolution, alongside strict surrogate waste feeds.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/nuclear-energy/" class="nc-btn-primary">Explore Nuclear Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/oil_gas.jpg" alt="Oil & Gas Refinery" class="nc-card-img"></div>
+                <h3>Oil & Gas Processing</h3>
+                <p>Custom reagents, proprietary catalysts, and specialized inorganic halide compounds designed to optimize deepwater extraction yields and extreme pressure hydrodesulfurization efficiency.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/oil-and-gas/" class="nc-btn-primary">Explore Extraction Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/hydrogen.jpg" alt="Hydrogen Electrolysis" class="nc-card-img"></div>
+                <h3>Hydrogen Energy</h3>
+                <p>Advanced catalyst precursors and high-purity inorganic electrolytes (e.g., Potassium Hydroxide) engineered for maximum ionic conductivity in commercial alkaline and PEM electrolysis.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/hydrogen-energy/" class="nc-btn-primary">Explore Hydrogen Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/solar_pv.jpg" alt="Solar PV Farm" class="nc-card-img"></div>
+                <h3>Solar Photovoltaics</h3>
+                <p>Extremely high-purity conductive salts and transparent oxides synthesized specifically to minimize trace metal lattice defects, maximizing long-term photoelectric conversion efficiency.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/solar-photovoltaics/" class="nc-btn-primary">Explore Solar Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/solar_thermal.jpg" alt="Concentrated Solar Power Facility" class="nc-card-img"></div>
+                <h3>Solar Salts & Thermal Storage</h3>
+                <p>Ultra-pure binary and ternary molten salt precursors (e.g., Sodium & Potassium Nitrates) rigorously formulated for extreme heat capacity and long-term stability in Concentrated Solar Power (CSP) applications.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/solar-salts/" class="nc-btn-primary">Explore Thermal Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/geothermal.jpg" alt="Geothermal Power Plant" class="nc-card-img"></div>
+                <h3>Geothermal Energy</h3>
+                <p>Heavy inorganic weighting agents and advanced scaling inhibitors explicitly engineered to protect downhole infrastructure against the extreme temperatures and corrosive subterranean brines of deep geothermal wells.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/geothermal-energy/" class="nc-btn-primary">Explore Geothermal Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/ccus.jpg" alt="CCUS Facility" class="nc-card-img"></div>
+                <h3>Carbon Capture & Storage (CCUS)</h3>
+                <p>Advanced inorganic sorbents and highly soluble liquid solvents (e.g., Potassium Carbonate) explicitly formulated to aggressively bind and strip CO2 from active flue-gas and direct air capture arrays.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/carbon-capture-ccus/" class="nc-btn-primary">Explore CCUS Supply &rarr;</a></div>
+            </div>
+
+            <div class="nc-card">
+                <div class="nc-card-img-wrap"><img src="./assets/biofuels.jpg" alt="Biofuels Refinery" class="nc-card-img"></div>
+                <h3>Biofuels & Biogas Refining</h3>
+                <p>High-purity inorganic transesterification catalysts and deep desulfurization agents (e.g., Zinc Oxides) engineered to maximize yield converting raw biomass into drop-in renewable fuels.</p>
+                <div class="nc-btn-wrap"><a href="/markets-we-serve/energy-sector/biofuels-refining/" class="nc-btn-primary">Explore Biofuel Supply &rarr;</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nc-section" style="max-width: 900px; margin: 0 auto 8rem auto;">
+        <h2 class="nc-h2" style="text-align: center;">Why Partner with Noah for the Energy Sector?</h2>
+        <ul class="nc-feature-list">
+            <li class="nc-feature-item">
+                <div class="nc-feature-icon-wrapper">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <div class="nc-feature-text">
+                    <strong>Unmatched Traceability & Purity</strong>
+                    <span style="color: #64748B;">From initial raw material sourcing to exhaustive ICP-OES validation, we ensure absolute, documentable chemical integrity to prevent catastrophic failures in high-stress energy environments.</span>
+                </div>
+            </li>
+            <li class="nc-feature-item">
+                <div class="nc-feature-icon-wrapper">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="nc-feature-text">
+                    <strong>Custom Synthesis Agility</strong>
+                    <span style="color: #64748B;">We scale seamlessly. Whether you require hundreds of grams for renewable R&D bench testing or continuous multi-ton bulk delivery for active grid deployment, our chemical engineers dictate the scale.</span>
+                </div>
+            </li>
+            <li class="nc-feature-item">
+                <div class="nc-feature-icon-wrapper">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <div class="nc-feature-text">
+                    <strong>Secure Handling & NDA Compliance</strong>
+                    <span style="color: #64748B;">End-to-end material handling tailored specifically to the strict environmental constraints of volatile energy materials, executed under absolute contractual secrecy.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="nc-insight-banner nc-section">
+        <div style="flex: 1; min-width: 320px;">
+            <img src="./assets/reactor_core.jpg" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);" alt="Actual Advanced Test Reactor Core utilizing authentic Boric Acid shims">
+        </div>
+        <div style="flex: 1.2; min-width: 320px;">
+            <span style="display: block; color: var(--e-global-color-8e0ff1d, #CD140C); font-weight: 600; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Featured Technical Briefing</span>
+            <h3 style="font-size: 2.6rem; font-weight: 300; color: #0F172A; margin: 0 0 1.5rem 0; line-height: 1.15; letter-spacing: -1px;">Boric Acid: Mechanism of Chemical Shims in Advanced Nuclear Arrays</h3>
+            <p style="font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; line-height: 1.8; font-weight: 400;">Read proprietary insights from our chemical engineering team regarding the critical application of Boron-10's exceptionally high thermal neutron cross-section probability. Learn how dissolving uniform soluble poisons in primary coolant prevents reactivity "hot spots" entirely.</p>
+            <a href="/boric-acid-chemical-shim-mechanism/" class="nc-btn-outline">Read Technical Briefing</a>
+        </div>
+    </section>
+
+    <section class="nc-section" style="max-width: 900px; margin: 0 auto 8rem auto;">
+        <h2 class="nc-h2">Energy Procurement Validation</h2>
+        <div class="nc-faq-item">
+            <strong>Does Noah Chemicals provide Certificates of Analysis for Energy Sector deliveries?</strong>
+            <p>Absolutely. We mandate 100% lot traceability and provide extensive Certificate of Analysis (CoA) documentation generated by our internal QA lab for every single shipment, guaranteeing precise physical and chemical morphology specifications.</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>Can you accommodate established proprietary formulas for battery technologies?</strong>
+            <p>Yes. Through our Custom Chemical Synthesis and Toll Blending infrastructure, we regularly execute proprietary electrolyte and catalyst formulas under strict, legally binding Non-Disclosure Agreements (NDAs).</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>What purity thresholds are strictly enforced for VRFB liquid electrolytes?</strong>
+            <p>To eliminate capacity decay via cross-contamination in Vanadium Redox Flow Batteries (VRFB), we strictly enforce purity levels exceeding 99.9% on precursor V2O5, leveraging ICP-OES validation to lock out trace iron and silica.</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>How do Boric Acid chemical shims prevent localized core reactivity spikes?</strong>
+            <p>Unlike fixed physical control rods, our high-purity Boric Acid is fully dissolved into the primary coolant loop. This creates an unvarying, uniform field of Boron-10 thermal neutron absorbers, ensuring total spatial dominance over reactivity without hot spots.</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>What is the role of continuous mass-spec validation in securing our chemical supply chain?</strong>
+            <p>Mission-critical environments like SMRs and offshore refineries cannot tolerate supplier drift. Our San Antonio facility explicitly conducts continual ICP Mass Spectrometry on all global raw inputs, completely insulating your supply chain from unregulated adulterants.</p>
+        </div>
+    </section>
+
+    <section class="nc-section" style="text-align: center; padding: 6rem 2rem; background: #FFFFFF; border: none; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.08);">
+        <h2 class="nc-h2" style="margin-bottom: 1.5rem;">Secure your Energy Sector supply chain.</h2>
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Don't submit strict procurement tolerances to a generic form. Speak directly to our quality engineers regarding your custom synthesis or bulk sourcing constraints.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/contact/" class="nc-btn-primary">Request a Secure Quote</a>
+            <a href="/noah-chemical-services/" class="nc-btn-outline">Speak With a Quality Engineer</a>
+        </div>
+    </section>
+
+    <!-- AEO Optimization: Entity & Knowledge Graph Output -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Noah Chemicals",
+          "url": "https://www.noahchemicals.com/",
+          "description": "Global manufacturer and distributor of high-purity inorganic chemicals for mission-critical applications.",
+          "knowsAbout": ["Chemical Engineering", "Vanadium Pentoxide", "Boric Acid", "Inorganic Synthesis", "VRFB Electrolytes"]
+        },
+        {
+          "@type": "WebPage",
+          "name": "Advanced Chemical Manufacturing for the Energy Sector",
+          "about": [
+            {"@type": "Thing", "name": "Nuclear Energy Chemicals"},
+            {"@type": "Thing", "name": "Geothermal Scaling Inhibitors"},
+            {"@type": "Thing", "name": "Carbon Capture Sorbents"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What purity thresholds are strictly enforced for VRFB liquid electrolytes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To eliminate capacity decay via cross-contamination in Vanadium Redox Flow Batteries (VRFB), we strictly enforce purity levels exceeding 99.9% on precursor V2O5, leveraging ICP-OES validation to lock out trace iron and silica."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</div>

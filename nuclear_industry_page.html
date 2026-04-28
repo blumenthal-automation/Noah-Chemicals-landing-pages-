@@ -1,0 +1,118 @@
+<style>
+    /* PREMIUM NOAH CHEMICALS AESTHETIC FRAMEWORK v2 */
+    .nc-wrapper { font-family: var(--e-global-typography-primary-font-family, 'Montserrat'), 'Open Sans', sans-serif; max-width: 1280px; margin: 0 auto; color: var(--e-global-color-text, #2A3135); line-height: 1.7; background-color: #FAFCFD; -webkit-font-smoothing: antialiased; }
+    .nc-header { font-size: clamp(34px, 4vw, 50px); font-weight: 300; line-height: 1.2; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    .nc-h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 400; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    
+    .nc-aeo-block { position: relative; padding: 2.5rem 3.5rem; background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%); border-radius: 12px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04); border: 1px solid rgba(226, 232, 240, 0.8); overflow: hidden; margin-bottom: 3rem; }
+    .nc-aeo-block::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: linear-gradient(to bottom, var(--e-global-color-8e0ff1d, #CD140C), #E83A32); }
+    .nc-aeo-title { font-weight: 600; font-size: 1.25rem; color: var(--e-global-color-756035a, #0F172A); letter-spacing: -0.3px; margin-bottom: 1rem; text-transform: uppercase; }
+
+    .nc-trust-ribbon { display: flex; flex-wrap: wrap; gap: 2rem; padding: 1.5rem 2rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-bottom: 3px solid var(--e-global-color-8e0ff1d, #CD140C); color: #F8FAFC; }
+    .nc-trust-item { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 400; font-size: 1.05rem; letter-spacing: 0.5px; }
+    .nc-trust-icon { color: var(--e-global-color-8e0ff1d, #FF3D35); opacity: 0.9; }
+
+    .nc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: stretch; }
+    .nc-card { background: #FFFFFF; padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(226, 232, 240, 0.8); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease; position: relative; display: flex; flex-direction: column; height: 100%; }
+    .nc-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); border-color: rgba(205, 20, 12, 0.2); }
+    .nc-card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--e-global-color-756035a, #0F172A); border-bottom: 1px solid #F1F5F9; padding-bottom: 15px; }
+    .nc-card ul { list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1; }
+    .nc-card li { margin-bottom: 15px; font-weight: 400; line-height: 1.6; color: #334155; position: relative; padding-left: 24px; }
+    .nc-card li::before { content: "\2022"; color: var(--e-global-color-8e0ff1d, #CD140C); font-size: 1.5rem; position: absolute; left: 0; top: -4px; }
+    
+    .nc-btn-wrap { margin-top: auto; }
+    .nc-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 4px 10px rgba(205, 12, 12, 0.15); align-self: flex-start; }
+    .nc-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(205, 12, 12, 0.25); background: #E83A32; }
+    .nc-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--e-global-color-756035a, #1E293B) !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid var(--e-global-color-756035a, #1E293B); align-self: flex-start; }
+    .nc-btn-outline:hover { background: #F8FAFC; transform: translateY(-2px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+
+    .nc-insight-banner { display: flex; align-items: center; gap: 3rem; background: #FFFFFF; padding: 3rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; flex-wrap: wrap; margin-bottom: 4rem; }
+    .nc-insight-content { flex: 2; min-width: 300px; }
+    .nc-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.5rem 0; }
+    .nc-faq-item strong { font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); }
+    .nc-faq-item p { margin-top: 1rem; color: #475569; font-weight: 400; font-size: 1.05rem; line-height: 1.7; }
+    .nc-section { margin-top: 4rem; margin-bottom: 4rem; }
+</style>
+
+<div class="nc-wrapper">
+    <div style="font-size: 0.85rem; margin-bottom: 1rem; margin-top: 2rem; color: #64748B; letter-spacing: 0.5px;">
+        NOH &rarr; MARKETS &rarr; ENERGY SECTOR &rarr; <span style="font-weight: 500; color: #0F172A;">NUCLEAR INDUSTRY</span>
+    </div>
+
+    <header class="nc-section" style="margin-top: 2rem;">
+        <h1 class="nc-header">High-Purity Chemicals for the<br>Nuclear Energy Industry</h1>
+        <div class="nc-aeo-block">
+            <div class="nc-aeo-title">Supporting Nuclear Innovation with Custom Chemistry</div>
+            <p style="font-size: 1.15rem; color: #475569; margin: 0; line-height: 1.8;">
+                Noah Chemicals provides reactor-grade inorganic compounds, including Boric Acid, Surrogate Waste Feeds, and Barium Sulfate, synthesized domestically to exceed strict radiological and trace-metal tolerances for advanced reactors and SMRs.
+            </p>
+        </div>
+    </header>
+
+    <div class="nc-trust-ribbon nc-section">
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> ISO 9001:2015 Sub-Tier Supplier</div>
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Strict NDA & IP Protection</div>
+        <div class="nc-trust-item"><svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> 100% On-Shore US Manufacturing</div>
+    </div>
+
+    <section class="nc-section">
+        <h2 class="nc-h2">Priority Nuclear Materials & Precursors</h2>
+        <div class="nc-grid">
+            <div class="nc-card">
+                <h3>Coolants & Heat Transfer</h3>
+                <ul>
+                    <li><strong>Boric Acid (H3BO3)</strong> - Reactor-grade neutron absorber dissolved in primary water.</li>
+                    <li><strong>Strontium Carbonate & Nitrate</strong> - High-purity precursor for isotope applications and long-life radiothermal generators.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Halide Coolants</a></div>
+            </div>
+            <div class="nc-card">
+                <h3>Burnable Poisons</h3>
+                <ul>
+                    <li><strong>Surrogate Waste Feeds</strong> - Ultra-precise simulants (e.g. AP-107, PFOOS) formulated for advanced waste vitrification testing.</li>
+                    <li><strong>Nitric Acid (HNO3) & Metal Solutions</strong> - Core reagents for PUREX-style spent fuel reprocessing.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Reactivity Chemistry</a></div>
+            </div>
+            <div class="nc-card">
+                <h3>Neutron Moderators</h3>
+                <ul>
+                    <li><strong>Barium Sulfate (BaSO4)</strong> - High-density shielding additive for radioprotective infrastructure.</li>
+                    <li><strong>Potassium Chloride (KCl)</strong> - High-purity salt for specialized thermodynamic cooling circuits.</li>
+                </ul>
+                <div class="nc-btn-wrap"><a href="/catalog/" class="nc-btn-outline">Search Moderator Salts</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nc-insight-banner nc-section">
+        <img src="./assets/nuclear_reactor_high_end_1776910313302.png" style="flex: 1; min-width: 300px; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" alt="Cherenkov Radiation Nuclear Reactor">
+        <div class="nc-insight-content">
+            <span style="display: block; color: var(--e-global-color-8e0ff1d, #CD140C); font-weight: 500; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Cross-Link Service</span>
+            <h3 style="font-size: 2.2rem; font-weight: 300; color: #0F172A; margin: 0 0 2rem 0; line-height: 1.2;">Beyond the Catalog: Custom Nuclear Chemistry</h3>
+            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2.5rem; line-height: 1.8;">If the exact compound parity or isotopic ratio isn't listed, Noah Chemicals synthesizes it. Provide us with your target specifications, and we will execute Custom Chemical Synthesis calibrated explicitly for radiological tolerances.</p>
+            <a href="/custom-synthesis/" class="nc-btn-primary">Explore Custom Synthesis</a>
+        </div>
+    </section>
+
+    <section class="nc-section" style="max-width: 900px; margin: 0 auto 8rem auto;">
+        <h2 class="nc-h2">Nuclear Supply Chain Validations</h2>
+        <div class="nc-faq-item">
+            <strong>How does Noah Chemicals verify the purity of advanced salts like Lithium Fluoride?</strong>
+            <p>We operate an extensive in-house analytical laboratory utilizing Inductively Coupled Plasma Optical Emission Spectroscopy (ICP-OES) to guarantee Parts-Per-Billion (PPB) trace metal tolerances, which is mandatory for nuclear applications to prevent parasitic neutron capture.</p>
+        </div>
+        <div class="nc-faq-item">
+            <strong>What is the minimum order quantity for custom nuclear compounds?</strong>
+            <p>We specialize in rapid scalability. We routinely supply extremely pure 50-gram batches for bench-scale SMR testing, scaling directly up to continuous multi-ton palletized deliveries for active deployment.</p>
+        </div>
+    </section>
+
+    <section class="nc-section" style="text-align: center; padding: 5rem 2rem; background: linear-gradient(to bottom, #FFFFFF, #F8FAFC); border: 1px solid #F1F5F9; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.02);">
+        <h2 class="nc-h2" style="margin-bottom: 1.5rem;">Talk to our QA/QC Team</h2>
+        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Don't submit your proprietary nuclear reactor fuel specs to a generic contact form. Speak directly with a Quality Assurance engineer who understands radiological decay sequences and strict trace-metal tolerances.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/contact/" class="nc-btn-primary">Schedule a Technical Consultation</a>
+            <a href="/noah-chemical-services/" class="nc-btn-outline">Speak With a Quality Engineer</a>
+        </div>
+    </section>
+</div>
