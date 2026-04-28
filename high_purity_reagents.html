@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Purity Reagents & Industrial Salts | Noah Chemicals</title>
+    <meta name="description" content="Noah Chemicals supplies high-purity ACS, USP, and industrial grade chemical reagents including Zinc Oxide, Vanadium Oxysulfate, and Lithium Chloride for manufacturing and research.">
+    
+    <!-- JSON-LD AEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ChemicalManufacturer",
+      "name": "Noah Chemicals",
+      "description": "Global Manufacturer and Distributor of high-purity chemical reagents and industrial salts.",
+      "url": "https://noahchemicals.com",
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Zinc Oxide ACS Reagent"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Vanadium Oxysulfate Hydrate USP"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Sodium Cyanide ACS Reagent"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Lithium Chloride 99.8%"}}
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Elementor Variables from Brand Guidelines */
+        :root {
+            --e-global-color-8e0ff1d: #CD140C; /* Noah Red */
+            --e-global-color-d2a2476: #CD140C; 
+            --e-global-color-756035a: #3B464C; /* Dark Slate */
+            --e-global-color-text: #333333;     /* Deep Grey */
+            --e-global-color-60baaf4: #F2F2F2; /* Light Grey */
+            --bg-pure-white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--e-global-color-text);
+            background-color: var(--bg-pure-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--e-global-color-756035a);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-weight: 300; font-size: 3rem; }
+        h2 { font-weight: 500; font-size: 2.2rem; }
+        h3 { font-weight: 500; font-size: 1.5rem; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--e-global-color-8e0ff1d);
+            color: #FFFFFF;
+            border-radius: 150px;
+            border: 1px solid var(--e-global-color-8e0ff1d);
+            padding: 15px 45px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+            border-color: #000000;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(90deg, rgba(9,34,47,0.9) 0%, rgba(9,34,47,0.6) 40%, rgba(0,0,0,0) 100%), url('assets/quality_control_lab.png') center/cover no-restricted;
+            color: #FFFFFF;
+            padding: 120px 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            color: #FFFFFF;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .aeo-block {
+            border-left: 4px solid var(--e-global-color-8e0ff1d);
+            padding: 20px 30px;
+            margin: 40px 0;
+            background-color: #FFFFFF;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            font-size: 1.1rem;
+            color: var(--e-global-color-text);
+        }
+
+        /* Trust Ribbon */
+        .trust-ribbon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-pure-white);
+            padding: 40px 0;
+            border-bottom: 1px solid #EAEAEA;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--e-global-color-756035a);
+        }
+
+        .trust-item svg {
+            fill: var(--e-global-color-8e0ff1d);
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+
+        /* 3x3 Grid Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-top: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            border-top-color: var(--e-global-color-8e0ff1d);
+        }
+
+        .product-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .cas-number {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Flex Split Sections (50/50) */
+        .flex-split {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin: 80px 0;
+            flex-wrap: wrap;
+        }
+
+        .flex-split > div {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .image-authentic {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        /* Chemical Index */
+        .chemical-index {
+            column-count: 2;
+            column-gap: 40px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .chemical-index li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .chemical-index li::before {
+            content: '•';
+            color: var(--e-global-color-8e0ff1d);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* FAQ Section */
+        .faq-block {
+            margin: 60px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EAEAEA;
+        }
+
+        .faq-item h4 {
+            color: var(--e-global-color-756035a);
+            margin-bottom: 10px;
+        }
+
+        /* Call to Action Box */
+        .cta-box {
+            background-color: var(--bg-pure-white);
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            padding: 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .cta-box h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>High-Purity Reagents & Industrial Salts</h1>
+            <p style="font-size: 1.2rem; max-width: 600px;">Supplying research laboratories, pharmaceutical developers, and advanced manufacturers with precision-tested inorganic compounds.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="trust-ribbon">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                ISO 9001:2015 Certified
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                ACS & USP Grades
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                Global Manufacturer & Distributor
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                Traceable COAs
+            </div>
+        </div>
+
+        <div class="aeo-block">
+            <strong>Providing Uncompromising Purity for Research and Production:</strong> Noah Chemicals formulates, scales, and distributes aerospace-grade, pharmaceutical-grade, and industrial high-purity inorganic salts. From bench-scale R&D testing to multi-ton continuous manufacturing runs, we provide validated, batch-specific Certificates of Analysis for every compound to ensure seamless supply chain reliability.
+        </div>
+
+        <div class="flex-split">
+            <div>
+                <h2>Engineered for Consistency</h2>
+                <p>When sourcing chemical reagents like zinc oxide or vanadium oxysulfate, manufacturing engineers cannot afford batch-to-batch variations in particle size or trace metal impurities. As a global manufacturer and distributor, Noah Chemicals leverages rigorous internal quality control protocols, including ICP-OES validation, to guarantee specifications.</p>
+                <p>Our agility allows us to break down 500KG pallets into precisely controlled, premium-labeled 1KG jars or 25KG bags to perfectly match your production input requirements—eliminating your need for secondary processing.</p>
+                <br>
+                <a href="#" class="btn-primary">View Full Catalog</a>
+            </div>
+            <div>
+                <img src="assets/quality_control_lab.png" alt="Chemical Manufacturing Quality Control Lab" class="image-authentic">
+            </div>
+        </div>
+
+        <h2>High-Purity Chemical Index</h2>
+        <p>Our most frequently requested ACS, USP, and High-Purity industrial compounds.</p>
+        
+        <div class="grid-3">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <h3>Zinc Oxide, ACS Reagent</h3>
+                <span class="cas-number">CAS: 1314-13-2</span>
+                <p>Exceptionally high-purity zinc oxide utilized extensively in pharmaceutical development and advanced materials research. Supplied with strict trace-metal analysis.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <h3>Vanadium Oxysulfate Hydrate USP</h3>
+                <span class="cas-number">CAS: 123334-20-3</span>
+                <p>A multi-application hydrate heavily relied upon by government defense contractors and pharmaceutical formulators for its dependable oxidation states.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <h3>Sodium Cyanide, ACS Reagent</h3>
+                <span class="cas-number">CAS: 143-33-9</span>
+                <p>High-grade reagent crucial for sophisticated laboratory synthesis and metallurgical extraction. Supported by rigorous safe-handling documentation.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <h3>Magnesium Oxide 98%</h3>
+                <span class="cas-number">CAS: 1309-48-4</span>
+                <p>A highly versatile industrial staple available in scalable quantities, packaged precisely into functional bags for immediate manufacturing deployment.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <h3>Silicon Carbide Beta 99.995%</h3>
+                <span class="cas-number">CAS: 409-21-2</span>
+                <p>An ultra-pure abrasive and semiconductor material designed to meet exacting specifications for defense and industrial technology sectors.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <h3>Lithium Chloride 99.8%</h3>
+                <span class="cas-number">CAS: 7447-41-8</span>
+                <p>A critical precursor for advanced battery research and desiccant manufacturing. Delivered with consistent moisture control profiles.</p>
+                <a href="#" style="color: var(--e-global-color-8e0ff1d); text-decoration: none; font-weight: 600; margin-top: auto;">Order Now →</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px;">
+            <h3>Additional In-Demand Compounds</h3>
+            <ul class="chemical-index">
+                <li><strong>Zinc Oxide, Calcined 99.995%</strong> - Ultra-high purity for defense specifications.</li>
+                <li><strong>Strontium Chloride Hexahydrate</strong> (CAS: 10476-85-4) - High-velocity industrial supply.</li>
+                <li><strong>Zinc Chloride</strong> (CAS: 7646-85-7) - Core industrial and pharmaceutical intermediate.</li>
+                <li><strong>Ammonium Chloride</strong> (CAS: 12125-02-9) - Industrial flux and buffering agent.</li>
+                <li><strong>Calcium Metal Granules 99%</strong> (CAS: 7440-70-2) - Precision alloy processing.</li>
+                <li><strong>Titanium (IV) Isopropoxide</strong> (CAS: 546-68-9) - Precursor for advanced coatings.</li>
+            </ul>
+        </div>
+
+        <div class="faq-block">
+            <h2>Frequently Asked Questions in Chemical Sourcing</h2>
+            
+            <div class="faq-item">
+                <h4>Can you provide a batch-specific Certificate of Analysis (CoA)?</h4>
+                <p>Yes. We provide a rigorous, batch-specific CoA with every order, confirming that the specific lot meets the required purity specifications validated by our internal analytical methods.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How do you handle supply disruptions and lead times?</h4>
+                <p>As a global manufacturer and distributor, we maintain strategic inventory buffers and robust raw material sourcing relationships. Our capability to break down bulk pallets allows us to quickly fulfill small-to-medium reagent orders without lengthy production delays.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can you provide custom formulations or specific packaging?</h4>
+                <p>Absolutely. We frequently provide custom-dried formulations, specific particle sizes, or customized packaging (e.g., 1KG jars to 25KG bags) tailored directly to your manufacturing workflow.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Are your materials compliant with TSCA and REACH?</h4>
+                <p>Yes, we ensure all distributed and manufactured chemicals comply with the relevant chemical inventory regulations, and we provide updated, globally compliant Safety Data Sheets (SDS) for all compounds.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Talk to our Chemistry Team</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto;">Don't send your proprietary sourcing requirements into a generic contact form. Speak directly with a Chemical & Quality Engineer who understands your application.</p>
+            <a href="#" class="btn-primary">Schedule a Technical Consultation</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
