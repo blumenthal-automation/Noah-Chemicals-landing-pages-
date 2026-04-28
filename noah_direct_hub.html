@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Direct | Express Chemical Procurement</title>
+    <meta name="description" content="Direct access to our most highly-validated, production-critical materials without the friction of a PO process. Available for immediate fulfillment in standard pack sizes.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Noah Direct Express Procurement",
+      "description": "Frictionless online procurement for high-purity laboratory reagents, advanced industrial materials, and defense compounds."
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Elementor Variables from Brand Guidelines */
+        :root {
+            --e-global-color-8e0ff1d: #CD140C; /* Noah Red */
+            --e-global-color-d2a2476: #CD140C; 
+            --e-global-color-756035a: #3B464C; /* Dark Slate */
+            --e-global-color-text: #333333;     /* Deep Grey */
+            --e-global-color-60baaf4: #F2F2F2; /* Light Grey */
+            --bg-pure-white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--e-global-color-text);
+            background-color: var(--bg-pure-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--e-global-color-756035a);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-weight: 300; font-size: 3.5rem; }
+        h2 { font-weight: 500; font-size: 2.2rem; }
+        h3 { font-weight: 500; font-size: 1.5rem; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(90deg, rgba(9,34,47,0.95) 0%, rgba(9,34,47,0.7) 40%, rgba(0,0,0,0) 100%), url('assets/premium_chemical_logistics.png') center/cover no-repeat;
+            color: #FFFFFF;
+            padding: 140px 20px;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            color: #FFFFFF;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px;
+            color: #E0E0E0;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--e-global-color-8e0ff1d);
+            color: #FFFFFF;
+            border-radius: 150px;
+            border: 1px solid var(--e-global-color-8e0ff1d);
+            padding: 18px 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+            border-color: #000000;
+        }
+
+        /* Categories Section */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .category-card {
+            background-color: var(--bg-pure-white);
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #F0F0F0;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            padding: 40px 30px 20px 30px;
+            border-bottom: 1px solid #F0F0F0;
+            position: relative;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--e-global-color-8e0ff1d);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .category-card:hover .card-header::before {
+            transform: scaleX(1);
+        }
+
+        .card-header h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.6rem;
+        }
+
+        .card-header p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .card-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .product-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #F5F5F5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-list li:last-child {
+            border-bottom: none;
+        }
+
+        .product-list a {
+            color: var(--e-global-color-756035a);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .product-list a:hover {
+            color: var(--e-global-color-8e0ff1d);
+        }
+
+        .stock-badge {
+            font-size: 0.75rem;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .card-action {
+            margin-top: auto;
+        }
+
+        .btn-secondary {
+            display: block;
+            text-align: center;
+            background-color: transparent;
+            color: var(--e-global-color-756035a);
+            border: 1px solid #DDDDDD;
+            border-radius: 150px;
+            padding: 12px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--e-global-color-756035a);
+            color: #FFFFFF;
+            border-color: var(--e-global-color-756035a);
+        }
+
+        /* Trust Callout */
+        .trust-callout {
+            background-color: var(--e-global-color-60baaf4);
+            border-radius: 12px;
+            padding: 60px;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .trust-stats {
+            flex: 1;
+            min-width: 250px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            border-left: 3px solid var(--e-global-color-8e0ff1d);
+        }
+
+        .stat-box h4 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--e-global-color-8e0ff1d);
+        }
+        
+        .stat-box span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Noah Direct.<br>Express Chemical Procurement.</h1>
+            <p>Skip the lead times. Direct access to our most highly-validated, production-critical materials without the friction of a PO process. Available for immediate fulfillment in standard pack sizes.</p>
+            <a href="#catalog" class="btn-primary">Browse the Express Catalog</a>
+        </div>
+    </section>
+
+    <div class="container" id="catalog">
+        <div class="section-header">
+            <h2>The Express Catalog</h2>
+            <p>We manufacture at a global scale, but we know R&D labs and mid-sized manufacturers can't always wait weeks for custom POs and bulk minimums. We've taken our most highly-requested verified compounds and made them available for immediate purchase.</p>
+        </div>
+
+        <div class="category-grid">
+            
+            <!-- Category A -->
+            <div class="category-card">
+                <div class="card-header">
+                    <h3>High-Purity Laboratory Reagents</h3>
+                    <p>ACS and USP grade compounds trusted by leading pharmaceutical and research institutions. Verified purity with every batch.</p>
+                </div>
+                <div class="card-body">
+                    <ul class="product-list">
+                        <li>
+                            <a href="high_purity_reagents.html">Zinc Oxide (ACS Reagent)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="high_purity_reagents.html">Sodium Cyanide (ACS Reagent)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="high_purity_reagents.html">Vanadium Oxysulfate (USP)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="high_purity_reagents.html">Lithium Chloride (99.8%)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                    </ul>
+                    <div class="card-action">
+                        <a href="high_purity_reagents.html" class="btn-secondary">View All Reagents</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category B -->
+            <div class="category-card">
+                <div class="card-header">
+                    <h3>Advanced Industrial Materials</h3>
+                    <p>Scalable, high-performance salts and oxides for continuous manufacturing. Buy a pilot bag today; scale to a pallet tomorrow.</p>
+                </div>
+                <div class="card-body">
+                    <ul class="product-list">
+                        <li>
+                            <a href="#">Magnesium Oxide (98%)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Zinc Chloride</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Ammonium Chloride</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Strontium Chloride</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                    </ul>
+                    <div class="card-action">
+                        <a href="#" class="btn-secondary">View Industrial Catalog</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category C -->
+            <div class="category-card">
+                <div class="card-header">
+                    <h3>Defense & Aerospace Compounds</h3>
+                    <p>Tightly toleranced, DFARS-compliant materials engineered to meet strict military specifications and regulatory constraints.</p>
+                </div>
+                <div class="card-body">
+                    <ul class="product-list">
+                        <li>
+                            <a href="#">Calcium Chromate (MIL-C-48038)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Zinc Oxide (Calcined 99.995%)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Silicon Carbide Beta (99.995%)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                        <li>
+                            <a href="#">Beryllium Oxide (99.5%)</a>
+                            <span class="stock-badge">In Stock</span>
+                        </li>
+                    </ul>
+                    <div class="card-action">
+                        <a href="#" class="btn-secondary">View Defense Materials</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="trust-callout">
+            <div class="trust-content">
+                <h2>Not a Generic Reseller. A Verified Manufacturer.</h2>
+                <p style="font-size: 1.1rem; color: #555;">Noah Chemicals isn't a drop-shipper. Every product in the Noah Direct catalog is supported by batch-specific Certificates of Analysis and our ISO 9001:2015 certified quality control laboratory.</p>
+                <p style="font-size: 1.1rem; color: #555;">Need more than 100KG? Our chemical engineering team is ready to scale these exact compounds into continuous toll blending or bulk pallet freight.</p>
+                <br>
+                <a href="#" class="btn-primary">Speak to an Engineer</a>
+            </div>
+            <div class="trust-stats">
+                <div class="stat-box">
+                    <h4>Batch-Specific CoAs</h4>
+                    <span>Included with every Direct order</span>
+                </div>
+                <div class="stat-box">
+                    <h4>ISO 9001:2015</h4>
+                    <span>Certified Quality Management</span>
+                </div>
+                <div class="stat-box">
+                    <h4>1KG to 25KG</h4>
+                    <span>Standard Express Packaging</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
