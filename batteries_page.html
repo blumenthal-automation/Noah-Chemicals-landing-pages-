@@ -1,149 +1,187 @@
 <style>
-    /* PREMIUM NOAH CHEMICALS AESTHETIC FRAMEWORK v2 */
-    .nc-wrapper { font-family: var(--e-global-typography-primary-font-family, 'Montserrat'), 'Open Sans', sans-serif; max-width: 1280px; margin: 0 auto; color: var(--e-global-color-text, #2A3135); line-height: 1.7; background-color: #FFFFFF; -webkit-font-smoothing: antialiased; }
-    .nc-header { font-size: clamp(34px, 4vw, 50px); font-weight: 300; line-height: 1.2; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
-    .nc-h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 400; letter-spacing: -0.5px; color: var(--e-global-color-756035a, #1E293B); margin-bottom: 2rem; }
+    /* SUB-INDUSTRY PREMIUM SPECIFICATION FRAMEWORK v3 */
+    .nc-sub-wrapper { font-family: var(--e-global-typography-primary-font-family, 'Montserrat'), 'Open Sans', sans-serif; max-width: 1280px; margin: 0 auto; color: var(--e-global-color-text, #2A3135); line-height: 1.7; background-color: #FFFFFF; -webkit-font-smoothing: antialiased; padding: 2rem 0;}
+    .nc-header { font-size: clamp(38px, 4.5vw, 56px); font-weight: 300; line-height: 1.15; letter-spacing: -1px; color: var(--e-global-color-756035a, #0F172A); margin-bottom: 2rem; }
+    .nc-h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; letter-spacing: -1px; color: var(--e-global-color-756035a, #0F172A); margin-bottom: 1rem; }
     
-    .nc-aeo-block { position: relative; padding: 3rem 4rem; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.08); border: none; overflow: hidden; margin-bottom: 4rem; }
-    .nc-aeo-block::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(to bottom, var(--e-global-color-8e0ff1d, #CD140C), #E83A32); }
-    .nc-aeo-title { font-weight: 600; font-size: 1.25rem; color: var(--e-global-color-756035a, #0F172A); letter-spacing: -0.3px; margin-bottom: 1rem; text-transform: uppercase; }
+    /* Hero 50/50 Split */
+    .nc-hero-split { display: flex; gap: 5rem; align-items: center; flex-wrap: wrap; margin-bottom: 5rem; padding-bottom: 5rem; border-bottom: 1px solid #F1F5F9; }
+    .nc-hero-left { flex: 1; min-width: 400px; }
+    .nc-hero-right { flex: 1; min-width: 400px; position: relative; }
+    .nc-hero-img { width: 100%; height: auto; min-height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.2); }
+    
+    .nc-aeo-text { position: relative; padding-left: 2.5rem; border-left: 4px solid var(--e-global-color-8e0ff1d, #CD140C); margin-top: 2.5rem; }
+    .nc-aeo-text p { font-size: 1.15rem; color: #475569; margin: 0; line-height: 1.85; font-weight: 400; }
+    .nc-aeo-eyebrow { font-weight: 600; font-size: 0.95rem; color: var(--e-global-color-8e0ff1d, #CD140C); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
 
-    .nc-trust-ribbon { display: flex; flex-wrap: wrap; gap: 2rem; padding: 1.5rem 2rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-bottom: 3px solid var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF; }
-    .nc-trust-item { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 400; font-size: 1.05rem; letter-spacing: 0.5px; text-align: center;}
-    .nc-trust-icon { color: var(--e-global-color-8e0ff1d, #FF3D35); opacity: 0.9; }
+    /* Heavy Data Table (Chemical Index) */
+    .nc-data-block { background: #F8FAFC; border-radius: 20px; padding: 4rem; margin-bottom: 6rem; border: 1px solid #E2E8F0; }
+    .nc-data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .nc-data-col { border-left: 1px solid rgba(15, 23, 42, 0.1); padding-left: 1.5rem; }
+    .nc-data-col ul { list-style: none; padding: 0; margin: 0; }
+    .nc-data-col li { margin-bottom: 1rem; font-size: 1.1rem; color: #0F172A; font-weight: 500; display: flex; align-items: baseline; gap: 0.5rem;}
+    .nc-data-col li::before { content: '—'; color: var(--e-global-color-8e0ff1d, #CD140C); font-weight: bold;}
 
-    .nc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: stretch; margin-top: 2rem;}
-    .nc-card { background: #FFFFFF; padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(226, 232, 240, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; display: flex; flex-direction: column; min-height: 100%; box-sizing: border-box; }
-    .nc-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); border-color: transparent; }
-    .nc-card h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--e-global-color-756035a, #0F172A); border-bottom: 1px solid #F1F5F9; padding-bottom: 15px; line-height: 1.3;}
-    .nc-card p { flex-grow: 1; color: #475569; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7; font-weight: 400; }
+    /* Specification Rows (Replacing Hub Cards) */
+    .nc-spec-container { margin-bottom: 6rem; }
+    .nc-spec-row { display: flex; gap: 4rem; padding: 4rem 0; border-top: 1px solid #E2E8F0; align-items: stretch; flex-wrap: wrap; transition: background 0.3s ease; }
+    .nc-spec-row:hover { background: rgba(248, 250, 252, 0.5); }
+    .nc-spec-title { width: 350px; flex-shrink: 0; }
+    .nc-spec-title h3 { font-size: 2rem; font-weight: 400; color: #0F172A; margin: 0 0 0.5rem 0; line-height: 1.2; letter-spacing: -0.5px;}
+    .nc-spec-title span { color: var(--e-global-color-8e0ff1d, #CD140C); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; }
+    .nc-spec-desc { flex-grow: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+    .nc-spec-desc p { font-size: 1.15rem; line-height: 1.8; color: #475569; margin: 0 0 1.5rem 0; font-weight: 400;}
 
-    .nc-btn-wrap { margin-top: auto; padding-top: 1.5rem; }
-    .nc-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 1px solid transparent; box-shadow: 0 8px 15px rgba(205, 12, 12, 0.15); align-self: flex-start; }
-    .nc-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(205, 12, 12, 0.3); background: #E83A32; }
-    .nc-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--e-global-color-756035a, #1E293B) !important; text-decoration: none; padding: 1rem 2rem; border-radius: 100px; font-weight: 500; font-size: 1rem; transition: all 0.3s ease; border: 2px solid var(--e-global-color-756035a, #1E293B); align-self: flex-start; }
-    .nc-btn-outline:hover { background: #F8FAFC; transform: translateY(-3px); box-shadow: 0 12px 20px rgba(0,0,0,0.08); }
+    /* Buttons & Utilities */
+    .nc-btn-wrap { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem;}
+    .nc-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: var(--e-global-color-8e0ff1d, #CD140C); color: #FFFFFF !important; text-decoration: none; padding: 1.1rem 2.5rem; border-radius: 100px; font-weight: 500; font-size: 1.05rem; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(205, 20, 12, 0.2); }
+    .nc-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(205, 20, 12, 0.35); background: #E83A32; }
+    .nc-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--e-global-color-756035a, #0F172A) !important; text-decoration: none; padding: 1.1rem 2.5rem; border-radius: 100px; font-weight: 500; font-size: 1.05rem; transition: all 0.3s ease; border: 2px solid var(--e-global-color-756035a, #0F172A); }
+    .nc-btn-outline:hover { background: #0F172A; color: #FFFFFF !important; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-    .nc-feature-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; }
-    .nc-feature-item { background: #FFFFFF; padding: 2.5rem; border-radius: 16px; display: flex; align-items: flex-start; gap: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.3s ease; border: 1px solid rgba(226, 232, 240, 0.5); }
-    .nc-feature-item:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: transparent; }
-    .nc-feature-icon-wrapper { min-width: 56px; height: 56px; background: rgba(205, 20, 12, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--e-global-color-8e0ff1d, #CD140C); }
-    .nc-feature-text strong { display: block; font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); margin-bottom: 0.5rem; }
-    .nc-feature-text span { font-weight: 400; font-size: 1.05rem; }
+    /* Dark Trust Ribbon - Horizontal Strip */
+    .nc-dark-strip { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; padding: 2rem 4rem; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 5rem; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); border-bottom: 4px solid var(--e-global-color-8e0ff1d, #CD140C); }
+    .nc-dark-strip-item { display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.5px;}
 
-    .nc-insight-banner { display: flex; align-items: center; gap: 4rem; background: #FFFFFF; padding: 4rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); border: none; flex-wrap: wrap; margin-bottom: 5rem; }
-    .nc-faq-item { border-bottom: 1px solid #E2E8F0; padding: 1.5rem 0; }
-    .nc-faq-item strong { font-size: 1.25rem; font-weight: 500; color: var(--e-global-color-756035a, #0F172A); }
-    .nc-faq-item p { margin-top: 1rem; color: #475569; font-weight: 400; font-size: 1.05rem; line-height: 1.7; }
-    .nc-section { margin-top: 4rem; margin-bottom: 4rem; }
+    /* FAQ Engineer Log Style */
+    .nc-faq-container { margin: 6rem 0; }
+    .nc-faq-item { border-bottom: 1px solid #E2E8F0; padding: 2rem 0; }
+    .nc-faq-item strong { display: block; font-size: 1.4rem; font-weight: 400; color: #0F172A; letter-spacing: -0.5px; margin-bottom: 1rem;}
+    .nc-faq-item p { color: #475569; font-size: 1.15rem; line-height: 1.8; margin: 0; }
 </style>
 
-<div class="nc-wrapper">
-    <div style="font-size: 0.85rem; margin-bottom: 1rem; margin-top: 2rem; color: #64748B; letter-spacing: 0.5px;">
-        NOH &rarr; MARKETS &rarr; ENERGY SECTOR &rarr; <span style="font-weight: 500; color: #0F172A;">BATTERIES & ENERGY STORAGE</span>
+<div class="nc-sub-wrapper">
+    <div style="font-size: 0.85rem; margin-bottom: 3rem; color: #64748B; letter-spacing: 1px; text-transform: uppercase;">
+        Noah Chemicals &rarr; Markets We Serve &rarr; <span style="font-weight: 600; color: var(--e-global-color-8e0ff1d, #CD140C);">Batteries & Energy Storage</span>
     </div>
 
-    <header class="nc-section" style="margin-top: 2rem;">
-        <h1 class="nc-header">High-Purity Chemicals for<br>Batteries & Energy Storage</h1>
-        
-        <div class="nc-aeo-block">
-            <div class="nc-aeo-title">Supporting Energy Storage Innovation with Custom Chemistry</div>
-            <p style="font-size: 1.15rem; color: #475569; margin: 0; line-height: 1.8;">
-                Noah Chemicals provides exceptionally high-purity inorganic precursor materials specifically synthesized to dictate thermodynamic and electrochemical stability in advanced energy storage architectures. From sourcing high-purity Vanadium Pentoxide to unlock the unique multi-oxidation states required for VRFB liquid electrolytes, to supplying Lithium Titanate (LTO) active materials capable of zero-strain rapid cycling, we ensure absolute chemical integrity for next-generation grids.
-            </p>
+    <!-- 50/50 Split Hero -->
+    <div class="nc-hero-split">
+        <div class="nc-hero-left">
+            <div class="nc-aeo-eyebrow">Advanced Manufacture & Synthesis</div>
+            <h1 class="nc-header">High-Purity Chemicals for Next-Gen Energy Storage</h1>
+            <div class="nc-aeo-text">
+                <p>Noah Chemicals provides exceptionally high-purity inorganic precursor materials specifically synthesized to dictate thermodynamic and electrochemical stability in advanced energy storage architectures. From supplying high-purity Vanadium Pentoxide that unlocks unique multi-oxidation states required for VRFB liquid electrolytes, to distributing exact-spec Lithium Titanate active materials capable of zero-strain rapid cycling, we ensure absolute chemical integrity for tier-1 battery supply chains globally.</p>
+            </div>
+            <div class="nc-btn-wrap">
+                <a href="https://www.noahchemicals.com/request-a-quote/" class="nc-btn-primary" target="_blank">Submit Formulations</a>
+                <a href="https://www.noahchemicals.com/catalog/" class="nc-btn-outline" target="_blank">Search Catalog</a>
+            </div>
         </div>
-    </header>
+        <div class="nc-hero-right">
+            <img src="./assets/batteries.jpg" alt="Automated Battery Testing Facility" class="nc-hero-img">
+        </div>
+    </div>
 
-    <div class="nc-trust-ribbon nc-section">
-        <div class="nc-trust-item">
-            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    <!-- Dark Trust Ribbon -->
+    <div class="nc-dark-strip">
+        <div class="nc-dark-strip-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--e-global-color-8e0ff1d, #FF3D35)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             ISO 9001:2015 Manufacturer
         </div>
-        <div class="nc-trust-item">
-            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            ITAR Registered Security
+        <div class="nc-dark-strip-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--e-global-color-8e0ff1d, #FF3D35)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            ITAR Registered Network
         </div>
-        <div class="nc-trust-item">
-            <svg class="nc-trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            Global Manufacturer & Distributor
+        <div class="nc-dark-strip-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--e-global-color-8e0ff1d, #FF3D35)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+            Global Sourcing & Strict QA Validation
         </div>
     </div>
-    
-    <section class="nc-section">
-        <h2 class="nc-h2" style="margin-bottom: 2rem;">High-Purity Core Chemical Index</h2>
-        <div style="background: #FFFFFF; padding: 3rem; border-radius: 16px; border: 1px solid rgba(226, 232, 240, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;">As a specialized supplier for energy storage tech, our synthesis capabilities encompass hundreds of precision compounds. Below is a high-level index of the critical inorganic chemistries driving advanced grid batteries.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                <ul style="list-style-type: none; padding: 0; margin: 0; color: #CD140C; font-weight: 500;">
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Vanadium Pentoxide (V2O5)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Lithium Titanate (Li2TiO3)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Potassium Chloride (KCl)</a></li>
-                </ul>
-                <ul style="list-style-type: none; padding: 0; margin: 0; color: #CD140C; font-weight: 500;">
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Lithium Carbonate (Li2CO3)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Lithium Hydroxide (LiOH)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Manganese Sulfate (MnSO4)</a></li>
-                </ul>
-                <ul style="list-style-type: none; padding: 0; margin: 0; color: #CD140C; font-weight: 500;">
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Cobalt Sulfate (CoSO4)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Nickel Sulfate (NiSO4)</a></li>
-                    <li style="margin-bottom: 0.5rem;">&bull; <a href="#" style="color: #0F172A; text-decoration: none;">Zinc Bromide (ZnBr2)</a></li>
-                </ul>
-            </div>
-            <div style="margin-top: 2rem;">
-                <a href="/catalog/" class="nc-btn-outline" style="border-width: 2px;">Search Full Catalog</a>
-            </div>
-        </div>
-    </section>
 
-    <section class="nc-section">
-        <h2 class="nc-h2">High-Priority Battery Architectures Supported by Noah Chemicals</h2>
+    <!-- Heavy Data Table: Chemical Index -->
+    <div class="nc-data-block">
+        <h2 class="nc-h2">High-Purity Core Chemical Index</h2>
+        <p style="font-size: 1.15rem; color: #475569; max-width: 800px;">As a specialized supplier for energy storage architectures, our production network encompasses hundreds of precision compounds. Below is a high-level index of the critical inorganic chemistries driving advanced grid batteries.</p>
         
-        <div class="nc-grid">
-            <div class="nc-card">
-                <span style="color: #CD140C; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">VRFB Liquid Electrolytes</span>
-                <h3>Vanadium Pentoxide (V2O5)</h3>
-                <p>Vanadium Pentoxide serves as the foundational precursor for vanadium-based liquid electrolytes in Redox Flow Batteries (VRFBs). Our V2O5 unlocks vanadium's unique ability to exist in four distinct oxidation states in solution, virtually eliminating permanent capacity loss caused by cross-contamination.</p>
-                <div class="nc-btn-wrap"><a href="/request-quote/" class="nc-btn-outline">Request Specification &rarr;</a></div>
+        <div class="nc-data-grid">
+            <div class="nc-data-col">
+                <ul>
+                    <li>Vanadium Pentoxide (V2O5)</li>
+                    <li>Lithium Titanate (Li2TiO3)</li>
+                    <li>Potassium Chloride (KCl)</li>
+                </ul>
             </div>
-
-            <div class="nc-card">
-                <span style="color: #CD140C; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Zero-Strain Spinel Structure</span>
-                <h3>Lithium Titanate (LTO)</h3>
-                <p>A critical active material for ultra-fast charging applications, LTO operates via a unique 3D spinel lattice structure. Unlike standard graphite anodes that suffer from severe volume expansion, LTO acts as a "zero-strain" insertion material, preventing mechanical degradation during extreme rapid cycling.</p>
-                <div class="nc-btn-wrap"><a href="/request-quote/" class="nc-btn-outline">Request Specification &rarr;</a></div>
+            <div class="nc-data-col">
+                <ul>
+                    <li>Lithium Carbonate (Li2CO3)</li>
+                    <li>Lithium Hydroxide (LiOH)</li>
+                    <li>Manganese Sulfate (MnSO4)</li>
+                </ul>
             </div>
-
-            <div class="nc-card">
-                <span style="color: #CD140C; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Halogen Flow Designs</span>
-                <h3>Potassium Chloride (KCl)</h3>
-                <p>Synthesized to strict-tolerance purities, our KCl is utilized as a highly stable electrolyte precursor and ionic conductive additive in next-generation zinc-halogen and advanced flow battery configurations, guaranteeing uniform ionic transport.</p>
-                <div class="nc-btn-wrap"><a href="/request-quote/" class="nc-btn-outline">Request Specification &rarr;</a></div>
-            </div>
-
-            <div class="nc-card">
-                <span style="color: #CD140C; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">NMC & LFP Cathode Precursors</span>
-                <h3>Lithium Carbonate & Hydroxide</h3>
-                <p>The mandatory starting foundation for virtually all high-capacity lithium-ion cathode architectures, including LFP (Lithium Iron Phosphate). Our domestic synthesis guarantees trace-metal tolerances are consistently below thresholds that would trigger destructive side-reactions.</p>
-                <div class="nc-btn-wrap"><a href="/request-quote/" class="nc-btn-outline">Request Specification &rarr;</a></div>
+            <div class="nc-data-col">
+                <ul>
+                    <li>Cobalt Sulfate (CoSO4)</li>
+                    <li>Nickel Sulfate (NiSO4)</li>
+                    <li>Zinc Bromide (ZnBr2)</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="nc-insight-banner nc-section">
-        <div style="flex: 1; min-width: 320px;">
-            <img src="./assets/batteries.jpg" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);" alt="Automated Battery Testing Facility">
+    <!-- Specification Rows (Replacing the Meta Hub's Grid Cards) -->
+    <div class="nc-spec-container">
+        <h2 class="nc-h2" style="margin-bottom: 3rem;">Specialized Battery Architectures Supported by Noah</h2>
+        
+        <div class="nc-spec-row">
+            <div class="nc-spec-title">
+                <span>VRFB Liquid Electrolytes</span>
+                <h3>Vanadium Pentoxide</h3>
+            </div>
+            <div class="nc-spec-desc">
+                <p>Vanadium Pentoxide functions as the extreme-purity foundational precursor for vanadium-based liquid electrolytes in Redox Flow Batteries (VRFBs). Our chemically tailored V2O5 unlocks vanadium's unique dynamic array of four distinct oxidation states within solution, virtually eliminating the permanent capacity decay historically caused by elemental cross-contamination.</p>
+                <div class="nc-btn-wrap" style="margin-top: 1rem;"><a href="https://www.noahchemicals.com/request-a-quote/" class="nc-btn-outline" style="padding: 0.8rem 2rem; font-size: 0.95rem;">Request Specification</a></div>
+            </div>
         </div>
-        <div style="flex: 1.2; min-width: 320px;">
-            <span style="display: block; color: var(--e-global-color-8e0ff1d, #CD140C); font-weight: 600; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Beyond the Catalog</span>
-            <h3 style="font-size: 2.6rem; font-weight: 300; color: #0F172A; margin: 0 0 1.5rem 0; line-height: 1.15; letter-spacing: -1px;">Custom Electrolyte Blending & Scale-Up Synthesis</h3>
-            <p style="font-size: 1.15rem; color: #475569; margin-bottom: 2.5rem; line-height: 1.8; font-weight: 400;">Energy storage innovation moves faster than generic catalogs can support. Our internal chemists specialize in proprietary electrolyte Custom Toll Blending and deep hydration control. We scale your R&D formulations from benchtop trials to multi-ton bulk production, executed flawlessly under binding NDAs.</p>
-            <a href="/noah-chemical-services/" class="nc-btn-primary">Explore Custom Synthesis</a>
-        </div>
-    </section>
 
-    <section class="nc-section" style="max-width: 900px; margin: 0 auto 8rem auto;">
-        <h2 class="nc-h2">Battery Procurement Validation (FAQ)</h2>
+        <div class="nc-spec-row">
+            <div class="nc-spec-title">
+                <span>Zero-Strain Spinel Structure</span>
+                <h3>Lithium Titanate</h3>
+            </div>
+            <div class="nc-spec-desc">
+                <p>A mission-critical active material demanded in ultra-fast charging applications, LTO operates via a unique 3D spinel lattice structure. Unlike standard graphite anodes that inevitably suffer from severe volume expansion, LTO performs as a reliable "zero-strain" insertion material, effectively preventing mechanical degradation during extreme rapid cycling.</p>
+                <div class="nc-btn-wrap" style="margin-top: 1rem;"><a href="https://www.noahchemicals.com/request-a-quote/" class="nc-btn-outline" style="padding: 0.8rem 2rem; font-size: 0.95rem;">Request Specification</a></div>
+            </div>
+        </div>
+
+        <div class="nc-spec-row">
+            <div class="nc-spec-title">
+                <span>Halogen Flow Designs</span>
+                <h3>Potassium Chloride</h3>
+            </div>
+            <div class="nc-spec-desc">
+                <p>Synthesized exclusively to strict-tolerance purities, our KCl is structurally utilized as a highly stable electrolyte precursor and ionic conductive additive in next-generation zinc-halogen and advanced flow battery configurations, guaranteeing uniform ionic transport.</p>
+                <div class="nc-btn-wrap" style="margin-top: 1rem;"><a href="https://www.noahchemicals.com/request-a-quote/" class="nc-btn-outline" style="padding: 0.8rem 2rem; font-size: 0.95rem;">Request Specification</a></div>
+            </div>
+        </div>
+
+        <div class="nc-spec-row">
+            <div class="nc-spec-title">
+                <span>NMC & LFP Cathode Precursors</span>
+                <h3>Lithium Carbonate</h3>
+            </div>
+            <div class="nc-spec-desc">
+                <p>The mandatory elemental starting foundation for virtually all high-capacity lithium-ion cathode architectures, including structural LFP (Lithium Iron Phosphate). Our global sourcing and domestic synthesis guarantees trace-metal tolerances adhere consistently below thresholds that would trigger destructive side-reactions.</p>
+                <div class="nc-btn-wrap" style="margin-top: 1rem;"><a href="https://www.noahchemicals.com/request-a-quote/" class="nc-btn-outline" style="padding: 0.8rem 2rem; font-size: 0.95rem;">Request Specification</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollytelling Visual Banner -->
+    <div style="border-radius: 20px; overflow: hidden; background: #000000; position: relative; height: 500px; display: flex; align-items: center; justify-content: center; margin-bottom: 6rem;">
+        <img src="./assets/solid_state_battery_premium_1776910327216.png" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: overlay;">
+        <div style="position: relative; z-index: 10; text-align: center; color: #FFFFFF; max-width: 800px; padding: 2rem;">
+            <h2 style="font-size: 3rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 1.5rem;">Beyond the Catalog: Custom Blending</h2>
+            <p style="font-size: 1.25rem; font-weight: 300; line-height: 1.8; margin-bottom: 2rem;">Energy storage innovation moves faster than generic catalogs can support. Our chemical scale-up engineers specialize in proprietary electrolyte Custom Toll Blending and deep hydration control under binding NDAs.</p>
+            <a href="https://www.noahchemicals.com/custom-chemical-manufacturing-services/" class="nc-btn-primary" target="_blank" style="background: #FFFFFF; color: #0F172A !important;">Explore Toll Blending Services</a>
+        </div>
+    </div>
+
+    <!-- FAQ Engineer's Log -->
+    <div class="nc-faq-container">
+        <h2 class="nc-h2">Battery Procurement Validation Requirements</h2>
+        
         <div class="nc-faq-item">
             <strong>What purity thresholds are strictly enforced for VRFB liquid electrolytes?</strong>
             <p>To eliminate capacity decay via cross-contamination in Vanadium Redox Flow Batteries (VRFB), we strictly enforce purity levels exceeding 99.9% on precursor V2O5, leveraging ICP-OES validation to lock out trace iron and silica.</p>
@@ -157,23 +195,10 @@
             <p>Even parts-per-million (ppm) levels of trace transition metals like Iron or Copper in precursor salts can instigate voltage suppression and trigger parasitic side-reactions, rapidly degrading cycle life. We resolve this by strictly isolating our synthesis lines to guarantee absolute compliance.</p>
         </div>
         <div class="nc-faq-item">
-            <strong>Does Noah Chemicals provide Certificates of Analysis for bulk electrolyte deliveries?</strong>
-            <p>Absolutely. We mandate 100% lot traceability and provide extensive Certificate of Analysis (CoA) documentation generated by our internal QA lab for every shipment, guaranteeing exact particle size dynamics and chemical morphology specifications.</p>
-        </div>
-        <div class="nc-faq-item">
             <strong>What is the MOQ for custom LTO or VRFB precursors?</strong>
-            <p>Because we operate as both a manufacturer and distributor, we possess extreme agility. We can supply small quantities for your initial bench tests and scale immediately to metric tons as your grid infrastructure deploys.</p>
+            <p>Because we operate utilizing a vast global distribution network anchored by our domestic facility, we possess extreme agility. We supply small quantities for initial bench tests and logically scale immediately to metric tons as grid infrastructure deploys.</p>
         </div>
-    </section>
-
-    <section class="nc-section" style="text-align: center; padding: 6rem 2rem; background: #FFFFFF; border: none; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.08);">
-        <h2 class="nc-h2" style="margin-bottom: 1.5rem;">Secure your Energy Storage supply chain.</h2>
-        <p style="font-size: 1.15rem; color: #475569; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Don't submit strict procurement tolerances to a generic form. Speak directly to our chemical engineers regarding your custom synthesis or bulk sourcing constraints for your advanced battery array.</p>
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/contact/" class="nc-btn-primary">Request a Secure Quote</a>
-            <a href="/noah-chemical-services/" class="nc-btn-outline" style="border-width: 2px;">Speak With a Chemical Engineer</a>
-        </div>
-    </section>
+    </div>
 
     <!-- AEO Optimization: Entity & Knowledge Graph Output -->
     <script type="application/ld+json">
@@ -184,7 +209,6 @@
           "@type": "Organization",
           "name": "Noah Chemicals",
           "url": "https://www.noahchemicals.com/",
-          "description": "Global manufacturer and distributor of high-purity inorganic chemicals for mission-critical applications.",
           "knowsAbout": ["Chemical Engineering", "Vanadium Pentoxide", "Lithium Titanate", "VRFB Electrolytes", "Battery Synthesis"]
         },
         {
@@ -193,19 +217,6 @@
           "about": [
             {"@type": "Thing", "name": "Lithium Battery Precursors"},
             {"@type": "Thing", "name": "Redox Flow Battery Chemicals"}
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What purity thresholds are strictly enforced for VRFB liquid electrolytes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "To eliminate capacity decay via cross-contamination in Vanadium Redox Flow Batteries (VRFB), we strictly enforce purity levels exceeding 99.9% on precursor V2O5, leveraging ICP-OES validation to lock out trace iron and silica."
-              }
-            }
           ]
         }
       ]
